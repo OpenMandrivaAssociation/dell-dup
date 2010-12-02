@@ -1,6 +1,6 @@
 %define name	dell-dup
 %define version	1.1.3
-%define rel	1
+%define rel	2
 
 Name:           %{name}
 Version:        %{version}
@@ -16,8 +16,8 @@ BuildRequires:	firmware-tools
 BuildRequires:	firmware-addon-dell
 Provides:	dell-bmcflash
 Provides:	dell-lsiflash
-Obsoletes:	dell-bmcflash < 1.5.0
-Obsoletes:	dell-lsiflash < 2.0.6
+Obsoletes:	dell-bmcflash <= 1.5.0
+Obsoletes:	dell-lsiflash <= 2.0.6
 
 %description
 This firmware-tools plugin will extract Dell DUPs into Firmware-Tools format.
