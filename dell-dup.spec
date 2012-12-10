@@ -11,7 +11,7 @@ License:        GPLv2+ and OSL
 URL:            http://linux.dell.com/libsmbios/download/
 Source0:        http://linux.dell.com/libsmbios/download/%{name}/%{name}-%{version}/%{name}-%{version}.tar.gz
 BuildArch:	noarch
-BuildRequires:  python-devel
+BuildRequires:  pkgconfig(python)
 BuildRequires:	firmware-tools
 BuildRequires:	firmware-addon-dell
 Provides:	dell-bmcflash
@@ -33,14 +33,9 @@ This firmware-tools plugin will extract Dell DUPs into Firmware-Tools format.
 %make check
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
 %doc COPYING-* README AUTHORS
 %{python_sitelib}/dell_dup
 %config(noreplace) %{_sysconfdir}/firmware/firmware.d/%{name}.conf
