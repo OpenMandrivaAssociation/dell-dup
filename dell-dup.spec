@@ -8,7 +8,7 @@ Release:        %mkrel %{rel}
 Summary:        A firmware-tools plugin to handle converting Dell DUPs to FT format
 Group:          System/Configuration/Hardware
 License:        GPLv2+ and OSL
-URL:            http://linux.dell.com/libsmbios/download/
+URL:            https://linux.dell.com/libsmbios/download/
 Source0:        http://linux.dell.com/libsmbios/download/%{name}/%{name}-%{version}/%{name}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:  pkgconfig(python)
